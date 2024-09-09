@@ -1,0 +1,13 @@
+{
+  "name": "cwmoss/wrun",
+  "description": "your friendly static site generator",
+  "version": "1.0",
+  "autoload": {
+    "psr-4": {
+      "wrun\\": "src"
+    }
+  },
+  "require": {
+    "nategood/httpful": "^1.0"
+  }
+}

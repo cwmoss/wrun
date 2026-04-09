@@ -10,7 +10,7 @@ class request {
     public $env = [];
     public array $body = [];
 
-    public function __construct($url, $env = []) {
+    public function __construct(string $url, array $env = []) {
         $this->name = $url;
         $this->method = strtolower($_SERVER["REQUEST_METHOD"]);
         $this->get = $_GET;

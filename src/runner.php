@@ -28,7 +28,7 @@ class runner {
         $this->load_env();
     }
 
-    public function run($url) {
+    public function run(string $url): response {
         $req = new request($url, $this->env);
         $resp = new response();
         $cname = $req->method . "_" . $req->name;
@@ -40,7 +40,11 @@ class runner {
         } else {
             $resp->not_found();
         }
-        $resp->emit();
+        return $resp;
+    }
+
+    public function run_and_output($url) {
+        $this->run($url)->emit();
     }
 
     public static function get_function(array $server) {
